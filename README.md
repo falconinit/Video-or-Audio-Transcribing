@@ -210,7 +210,7 @@ Start-BitsTransfer `
 python '.\ytDL_transcribe_multi.py'
 ```
 
-#### Full Script
+#### Full Python Script
 
 ```python
 import os
