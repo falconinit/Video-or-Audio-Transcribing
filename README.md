@@ -12,6 +12,7 @@ Run
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
+### Install or Update Windows Terminal (Optional)
 Run Update-WindowsTerminal.ps1
 
 ```powershell
