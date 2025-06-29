@@ -12,7 +12,7 @@ Run
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-Run **Update-WindowsTerminal.ps1
+Run Update-WindowsTerminal.ps1
 
 ```powershell
 # Update-WindowsTerminal.ps1
@@ -50,7 +50,7 @@ Run
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-Run **'installrequirements.ps1'
+Run installrequirements.ps1
 ```powershell
 # ————————————————————————————————
 # Combined Setup Script: Chocolatey → WinGet → pip → Extras
