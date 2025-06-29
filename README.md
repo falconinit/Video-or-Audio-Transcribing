@@ -1,6 +1,6 @@
 # Video-or-Audio-Transcribing
 
-## # Utilizing some PowerShell and a Python script, these are the Windows steps to transcribe a YouTube video or any video or audio file to a text file. The video and audio files are also saved.
+## Utilizing some PowerShell and a Python script, these are the Windows steps to transcribe a YouTube video or any video or audio file to a text file. The video and audio files are also saved.
 
 ### Open PowerShell as Administrator
 
