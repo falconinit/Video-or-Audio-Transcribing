@@ -253,7 +253,7 @@ def prompt_for_video_id():
     dlg.title("Download Video")
     dlg.geometry("350x120")
 
-    tk.Label(dlg, text="Enter Video ID (i.e. 4PHAHYCfnPE) or leave blank to select files:").pack(padx=10, pady=10)
+    tk.Label(dlg, text="Enter YouTube Video ID (i.e. 4PHAHYCfnPE) or leave blank to select files:").pack(padx=10, pady=10)
     entry = tk.Entry(dlg, width=30)
     entry.pack(padx=10)
 
