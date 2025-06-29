@@ -16,6 +16,12 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 Run Update-WindowsTerminal.ps1
 
 ```powershell
+& '.\Update-WindowsTerminal.ps1'
+```
+
+### Full Script
+
+```powershell
 # Update-WindowsTerminal.ps1
 # Checks for Windows Terminal (wt.exe); installs if missing, otherwise updates via winget.
 
@@ -52,6 +58,13 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 Run installrequirements.ps1
+
+```powershell
+& '.\installrequirements.ps1'
+```
+
+### Full Script
+
 ```powershell
 # ————————————————————————————————
 # Combined Setup Script: Chocolatey → WinGet → pip → Extras
