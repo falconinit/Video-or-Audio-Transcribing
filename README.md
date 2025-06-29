@@ -195,7 +195,7 @@ Start-BitsTransfer `
 
 #### Extract zip file to same folder (ffmpeg.exe etc... should be taken out of the bin folder and pasted in the yt-dlp folder)
 
-
+![alt text](http://url/to/img.png)
 
 #### Run python script in PowerShell in same folder as above
 
