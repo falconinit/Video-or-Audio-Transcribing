@@ -218,7 +218,7 @@ Start-BitsTransfer `
 
 ![alt text](https://raw.githubusercontent.com/falconinit/Video-or-Audio-Transcribing/refs/heads/main/yt-dlp.png)
 
-#### Run python script in PowerShell in same folder as above
+#### Run python script in PowerShell in same folder as above and just follow the prompts.
 
 ```powershell
 python '.\ytDL_transcribe_multi.py'
