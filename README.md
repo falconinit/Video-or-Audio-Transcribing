@@ -251,9 +251,12 @@ def show_splash_screen():
 def prompt_for_video_id():
     dlg = tk.Tk()
     dlg.title("Download Video")
-    dlg.geometry("350x120")
+    dlg.geometry("350x150")
 
-    tk.Label(dlg, text="Enter YouTube Video ID (i.e. 4PHAHYCfnPE) to download and transcribe a YouTube video (has not been tested while using a VPN) or leave blank to select files:").pack(padx=10, pady=10)
+    tk.Label(dlg, text="Enter YouTube Video ID (i.e. 4PHAHYCfnPE) to \n"
+                    "download and transcribe a YouTube video \n"
+                    "(has not been tested while using a VPN) \n"
+                    "or leave blank to select files:").pack(padx=10, pady=10)
     entry = tk.Entry(dlg, width=30)
     entry.pack(padx=10)
 
