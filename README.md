@@ -44,7 +44,7 @@ if (Get-Command wt.exe -ErrorAction SilentlyContinue) {
 }
 ```
 
-### Click on Windows Terminal icon while pressing Shift/Enter
+### Click on Windows Terminal icon while pressing Ctrl and Shift together
 
 Run
 ```powershell
