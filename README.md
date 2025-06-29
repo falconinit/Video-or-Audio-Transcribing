@@ -195,7 +195,7 @@ Start-BitsTransfer `
 
 #### Extract zip file to same folder (ffmpeg.exe etc... should be taken out of the bin folder and pasted in the yt-dlp folder)
 
-![alt text]([https://raw.githubusercontent.com/falconinit/Video-or-Audio-Transcribing/refs/heads/main/yt-dlp.png])
+![alt text](https://raw.githubusercontent.com/falconinit/Video-or-Audio-Transcribing/refs/heads/main/yt-dlp.png)
 
 #### Run python script in PowerShell in same folder as above
 
