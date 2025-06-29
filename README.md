@@ -2,7 +2,7 @@
 
 ## Utilizing some PowerShell and a Python script, these are the Windows steps to transcribe a YouTube video or any video or audio file to a text file. The video and audio files are also saved.
 
-# Go check out yt-dlp and their amazing work! https://github.com/yt-dlp
+## Go check out yt-dlp and their amazing work! https://github.com/yt-dlp
 
 
 ### Open PowerShell as Administrator
