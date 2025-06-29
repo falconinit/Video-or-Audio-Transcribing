@@ -2,6 +2,9 @@
 
 ## Utilizing some PowerShell and a Python script, these are the Windows steps to transcribe a YouTube video or any video or audio file to a text file. The video and audio files are also saved.
 
+# Go check out yt-dlp and their amazing work! https://github.com/yt-dlp
+
+
 ### Open PowerShell as Administrator
 
 Run
@@ -177,7 +180,9 @@ Write-Host "Setup complete!" -ForegroundColor Magenta
 
 ```
 
-#### # Download yt-dlp to folder of choosing (C:\Users\name\Documents\yt-dlp) (this example uses PowerShell, you can use your browser)
+#### Download yt-dlp to folder of choosing (C:\Users\name\Documents\yt-dlp) (this example uses PowerShell, you can use your browser)
+
+https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe
 
 ```powershell
 Start-BitsTransfer `
@@ -187,7 +192,9 @@ Start-BitsTransfer `
 
 #### Download ffmpeg to same folder (this example uses PowerShell, you can use your browser)
 
-```powersshell
+https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
+
+```powershell
 Start-BitsTransfer `
   -Source "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip" `
   -Destination ".\ffmpeg-release-essentials.zip"
