@@ -80,7 +80,7 @@ Write-Host "Installing remaining Python packages..." -ForegroundColor Cyan
 python -m pip install `
     torch torchvision torchaudio tk `
     nltk spacy transformers SpeechRecognition moviepy `
-    pydub opencv-python ffmpeg-python requests tk whisper `
+    pydub opencv-python ffmpeg-python requests whisper `
         
 Write-Host "Installing pinned packages numpy..." -ForegroundColor Cyan
 python -m pip install numpy==1.26.4
