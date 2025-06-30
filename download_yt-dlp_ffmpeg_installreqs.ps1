@@ -19,7 +19,7 @@ Start-BitsTransfer `
 Write-Host "Downloading ffmpeg ZIP to $destDir…" -ForegroundColor Cyan
 $zipFile = Join-Path $destDir "ffmpeg-release-essentials.zip"
 Start-BitsTransfer `
-  -Source "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip" `
+  -Source "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-7.1.1-essentials_build.zip" `
   -Destination $zipFile
 
 # 0.3 Extract and promote bin\* → $destDir
@@ -28,7 +28,7 @@ $extractDir = Join-Path $destDir "ffmpeg-temp"
 Expand-Archive -Path $zipFile -DestinationPath $extractDir -Force
 
 Write-Host "Moving ffmpeg binaries up one level…" -ForegroundColor Cyan
-$binDir = Join-Path $extractDir "ffmpeg-release-essentials\bin"
+$binDir = Join-Path $extractDir "ffmpeg-7.1.1-essentials_build\bin"
 Get-ChildItem -Path $binDir -File | Move-Item -Destination $destDir -Force
 
 # 0.4 Clean up ZIP and temp folder
