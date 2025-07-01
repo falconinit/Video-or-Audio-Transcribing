@@ -130,29 +130,41 @@ if (-not (CommandExists "pip")) {
 }
 
 # -----------------------------------------------------
-# 6. Upgrade pip & install Python packages
+# 6.a. Ensure exact numpy==1.26.4
 # -----------------------------------------------------
+Write-Host "Checking for numpy installation..." -ForegroundColor Cyan
 
-Write-Host "Upgrading pip..." -ForegroundColor Cyan
-python -m pip install --upgrade pip
+# Try to read the installed version
+try {
+    $installed = & python -c "import numpy; print(numpy.__version__)" 2>$null
+} catch {
+    $installed = $null
+}
 
-Write-Host "Installing Whisper (from GitHub)..." -ForegroundColor Cyan
-python -m pip install git+https://github.com/openai/whisper.git
+if ($installed) {
+    if ($installed -ne '1.26.4') {
+        Write-Host "Found numpy v$installed; uninstalling..." -ForegroundColor Yellow
+        python -m pip uninstall -y numpy
+        Write-Host "Installing numpy v1.26.4..." -ForegroundColor Cyan
+        python -m pip install numpy==1.26.4
+    } else {
+        Write-Host "numpy v1.26.4 already installed; skipping." -ForegroundColor Green
+    }
+} else {
+    Write-Host "numpy not found; installing v1.26.4..." -ForegroundColor Cyan
+    python -m pip install numpy==1.26.4
+}
 
-Write-Host "Installing pinned packages numba..." -ForegroundColor Cyan
-python -m pip install numba==0.60.0
-
-Write-Host "Installing pinned packages numpy..." -ForegroundColor Cyan
-python -m pip install numpy==1.26.4
-
+# -----------------------------------------------------
+# 6.b. Install remaining Python packages
+# -----------------------------------------------------
 Write-Host "Installing remaining Python packages..." -ForegroundColor Cyan
 python -m pip install `
+    git+https://github.com/openai/whisper.git `
+    numba==0.60.0 `
     torch torchvision torchaudio tk `
     nltk spacy transformers SpeechRecognition moviepy `
-    pydub opencv-python ffmpeg-python requests whisper `
-        
-Write-Host "Installing pinned packages numpy..." -ForegroundColor Cyan
-python -m pip install numpy==1.26.4
+    pydub opencv-python ffmpeg-python requests pyinstaller
 
 Write-Host "All Python packages installed" -ForegroundColor Green
 
