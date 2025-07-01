@@ -1,25 +1,26 @@
-# Video-or-Audio-Transcribing
+# Sync Test Video-or-Audio-Transcribing
 
 ## Utilizing some PowerShell and a Python script, these are the Windows steps to transcribe a YouTube video or any video or audio file to a text file. The video and audio files are also saved.
 
 ## Go check out yt-dlp and their amazing work! https://github.com/yt-dlp
 
 
-### Open PowerShell as Administrator
+### Getting Started.
+#### Open PowerShell as Administrator
 
 Run
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-### Install or Update Windows Terminal (Optional)
+#### Install or Update Windows Terminal (Optional)
 Run Update-WindowsTerminal.ps1
 
 ```powershell
 & '.\Update-WindowsTerminal.ps1'
 ```
 
-### Full Script
+#### Full Script
 
 ```powershell
 # Update-WindowsTerminal.ps1
@@ -50,7 +51,7 @@ if (Get-Command wt.exe -ErrorAction SilentlyContinue) {
 }
 ```
 
-### Click on Windows Terminal icon while pressing Ctrl and Shift together
+#### Click on Windows Terminal icon while pressing Ctrl and Shift together
 
 Run
 ```powershell
@@ -63,7 +64,7 @@ Run installrequirements.ps1
 & '.\installrequirements.ps1'
 ```
 
-### Full Script
+#### Full Script
 
 ```powershell
 # ————————————————————————————————
@@ -233,12 +234,16 @@ Start-BitsTransfer `
 
 ![alt text](https://raw.githubusercontent.com/falconinit/Video-or-Audio-Transcribing/refs/heads/main/yt-dlp.png)
 
+#### Optionally, you can run this more comprehensive PowerShell script to do the downloading and extracting for you.
+
+```powershell
+& '.\download_yt-dlp_ffmpeg_installreqs.ps1'
+```
 #### Run python script in PowerShell in same folder as above and just follow the prompts.
 
 ```powershell
 python '.\ytDL_transcribe_multi.py'
 ```
-
 #### Full Python Script
 
 ```python
@@ -401,5 +406,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
